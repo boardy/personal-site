@@ -1,26 +1,120 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@layer base {
+  @font-face {
+    font-display:swap;
+    font-family: 'Oxanium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Oxanium'), url('../fonts/Oxanium-VariableFont_wght.ttf') format('truetype');
   }
-  body {
-    color: white;
-    background: black;
+
+  html, body{
+    font-family: 'Oxanium', sans-serif;
+    background-color: #f2f2f2;
+    height: 100%;
+  }
+
+  p > img {
+    @apply mx-auto text-center
+  }
+
+  p > img + p {
+    @apply text-center bg-gray-400
+  }
+
+  table > thead > tr {
+    @apply bg-primary-light text-white font-bold text-left
+  }
+
+  table > thead > tr > th, table > tbody > tr > td {
+    @apply p-2
+  }
+
+  table > tbody > tr:even {
+    @apply bg-white
+  }
+
+  table > tbody > tr:odd {
+    @apply bg-gray-300
+  }
+
+  table > tbody > tr:hover {
+    @apply bg-gray-200 transition-all ease-in-out duration-200
+  }
+
+  table.data-table {
+    @apply w-full
+  }
+
+  table.data-table >* td:first-child {
+    @apply font-bold text-right;
+  }
+  blockquote {
+    @apply border-l-[12px] border-gray-300
+  }
+
+  blockquote > p {
+    @apply ml-4
+  }
+
+  #__next {
+    @apply bg-[#f2f2f2] w-full h-full max-h-full;
+  }
+
+  a {
+    @apply text-primary-light hover:underline
+  }
+
+  pre > code {
+    @apply block bg-white p-1 rounded border-[1px] border-gray-400;
+  }
+
+  p {
+    @apply py-1
+  }
+
+  h1 {
+    @apply text-3xl text-primary font-bold my-6
+  }
+
+  h2 {
+    @apply text-2xl text-primary font-bold my-6
+  }
+
+  h3 {
+    @apply text-xl text-primary font-bold my-6
+  }
+
+  #root {
+    @apply flex flex-col h-screen;
+  }
+
+  .kg-image, figure {
+    @apply text-center mx-auto
+  }
+
+  figcaption {
+    @apply text-center text-gray-400
+  }
+}
+
+@layer utilities {
+  .font-bold {
+    font-variation-settings: 'wght' 600;
+  }
+
+  strong {
+    @apply font-bold
+  }
+
+  i {
+    @apply italic
+  }
+
+  u {
+    @apply underline
   }
 }

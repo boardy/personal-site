@@ -11,14 +11,18 @@
   "dependencies": {
     "next": "12.3.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "devso-nextjs-library": "git+https://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:x-oauth-basic@github.com/DevsoIO/devso-nextjs-library.git#0.0.3"
   },
   "devDependencies": {
     "@types/node": "18.11.3",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
+    "autoprefixer": "^10.4.12",
     "eslint": "8.25.0",
     "eslint-config-next": "12.3.1",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.2.1",
     "typescript": "4.8.4"
   }
 }
