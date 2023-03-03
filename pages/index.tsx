@@ -2,6 +2,7 @@ import type {NextPage} from 'next'
 import TopNav from "../components/TopNav";
 import ContentWrapper from "../components/ContentWrapper";
 import ProjectCard, {Project} from "../components/ProjectCard";
+import useBlogPosts from "../hooks/useBlogPosts";
 
 
 const Home: NextPage = () => {
@@ -21,6 +22,23 @@ const Home: NextPage = () => {
         }
     ]
 
+    const otherProjects : Project[] = [
+        {
+            name: "Android MySQL Connector",
+            logo: "https://devso.io/images/logo.png",
+            tag_line: "Open source native Android MySQL Connector",
+            link: "https://github.com/BoardiesITSolutions/Android-MySQL-Connector"
+        },
+        {
+            name: "DDHueAlert",
+            logo: "https://github.com/BoardiesITSolutions/DDHueAlert/blob/master/logo.png?raw=true",
+            tag_line: "Flash your Philips Hue bulbs based on state of your Datadog Monitors",
+            link: "https://github.com/BoardiesITSolutions/DDHueAlert"
+        }
+    ]
+
+    const {postsLoading, postsError, posts} = useBlogPosts();
+
     return (
       <>
           <TopNav />
@@ -29,6 +47,15 @@ const Home: NextPage = () => {
               <div className='flex flex-row'>
                   {
                       mainProjects.map(project => {
+                          return <ProjectCard {...project} />
+                      })
+                  }
+              </div>
+
+              <h2>Other Projects</h2>
+              <div className='flex flex-row'>
+                  {
+                      otherProjects.map(project => {
                           return <ProjectCard {...project} />
                       })
                   }

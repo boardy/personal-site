@@ -13,7 +13,7 @@
 
   html, body{
     font-family: 'Oxanium', sans-serif;
-    background-color: #f2f2f2;
+    background-color: white !important;
     height: 100%;
   }
 
@@ -61,7 +61,7 @@
   }
 
   #__next {
-    @apply bg-[#f2f2f2] w-full h-full max-h-full;
+    @apply bg-white w-full h-full max-h-full;
   }
 
   a {

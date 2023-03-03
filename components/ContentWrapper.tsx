@@ -3,7 +3,7 @@ import {DefaultProps} from "devso-nextjs-library";
 
 const ContentWrapper : React.FC<DefaultProps> = (props) => {
     return (
-        <div className='w-3/4 mx-auto'>
+        <div className='w-3/4 mx-auto !bg-white'>
             {props.children}
         </div>
     )

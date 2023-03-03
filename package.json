@@ -9,10 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "devso-nextjs-library": "git+https://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:x-oauth-basic@github.com/DevsoIO/devso-nextjs-library.git#0.0.3",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "devso-nextjs-library": "git+https://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:x-oauth-basic@github.com/DevsoIO/devso-nextjs-library.git#0.0.3"
+    "remove-markdown": "^0.5.0"
   },
   "devDependencies": {
     "@types/node": "18.11.3",
